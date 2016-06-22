@@ -6,9 +6,12 @@
 
 We are going to try something new and build off of Kaitlin's excellent presentation last week.
     
-The lab will be split into teams of two listed below and will be assigned to use either ggplot2 or base to create **their own** version of the graph in the `.pdf` file found within this repo.  All the data that you will need can be found in the `.csv` file titled *test3R.csv*.  Simply clone the repository with the following command and you will be on your way:
+The lab will be split into teams of two listed below and will be assigned to use either ggplot2 or base to create **their own** version of the graph in the `.pdf` file found within this repo.  All the data that you will need can be found in the `.csv` file titled *test3R.csv*.  Simply clone the repository and follow the below instructions and you will be on your way:
   
-```git clone https://github.com/marcsze/SchlossLabPresentations.git```
+*   Copy the repo  ```git clone https://github.com/marcsze/SchlossLabPresentations.git```
+*   Move into the `2016_06_23` directory of `SchlossLabPresentations`
+*   Move these files to whatever directory you want them in
+*   Work with your team to create a kick-!@# graph
 
 Now, if this command does not work there will be a USB provided during the session so that you will be able to get the data without any hassale or significant loss of time to make the graph.
   
