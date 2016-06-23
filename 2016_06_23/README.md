@@ -1,6 +1,7 @@
 # Schloss Lab Graphing Hack-a-thon
 ## Use ggplot2 or base
 
+#ALSO GGPLOT IS AWESOME!!!
 
 **General Overview**
 
