@@ -1,0 +1,200 @@
+---
+title: "Recap of Schloss Lab Graph Hack-a-thon: Base versus ggPlot2"
+author: "Marc Sze"
+date: "June 29, 2016"
+output: 
+  html_document:
+    keep_md: yes
+---
+```{r load_packages, warning=FALSE, message=FALSE, echo=FALSE}
+
+deps = c("ggplot2", "RColorBrewer", "wesanderson");
+for (dep in deps){
+  if (dep %in% installed.packages()[,"Package"] == FALSE){
+    install.packages(as.character(dep), quiet=TRUE);
+  }
+  library(dep, verbose=FALSE, character.only=TRUE)
+}
+
+```
+
+
+
+##Disclaimer
+
+*My first disclaimer is that I feel that I should state ahead of time that I am a ggplot2 user and so I may be slightly biased as to which I prefer or think "won" our labs first graphing hack-a-thon.*
+<br><br>
+*My second disclaimer is that I originally decided to try this for our lab code review for partly selfish reasons.  Basically I though my lab mates could provide interesting and neat ways to visualize and improve the standard forest plot that I could use*
+<br><br>
+
+##Outline
+
+So with that all out of the way this post will take the following format:
+
+1.  General Overview
+2.  Teams
+3.  Graphs by Team
+4.  Final Thoughts
+<br><br>
+
+##General Overview
+
+The lab was split into teams of two listed later on below and will be assigned the use of either ggplot2 or base to create **their own** version of this graph:
+
+```{r example_Graph, warning=FALSE, message=FALSE, echo=FALSE}
+
+test3R <- read.csv("test3R.csv")
+test3R$Study <- factor(test3R$Study, levels = c("Pooled Outcome", "HMP, 2011, n=256", "Turnbaugh, 2009, n=146", "Wu, 2012, n=63", "Zupancic, 2012, n=200", "Escobar, 2014, n=30", "Ross, 2015, n=63", "Goodrich, 2014, n=507", "Baxter, 2015, n=172"))
+
+RRTest <- ggplot(test3R, aes(LogFC, Study, xmax=CIUB, xmin=CILB))
+HRRG1 <- RRTest + coord_cartesian(xlim=c(-2.2, 2.2)) + 
+  geom_vline(xintercept = 0.0, linetype=2, alpha=0.75) + 
+  geom_errorbarh(aes(colour=Region), alpha=0.5, height=0) + 
+  geom_errorbarh(data = subset(test3R, Study=="Pooled Outcome"), 
+                 colour="black", alpha=0.5, height=0) + 
+  geom_point(aes(colour=Region), size = 3) + ylab("") + 
+  xlab("Log Relative Risk") + 
+  geom_point(data = subset(test3R, Study=="Pooled Outcome"), 
+             colour="black", size=5) + 
+  scale_color_manual(values = wes_palette("Darjeeling")) + 
+  scale_size(range=c(2, 5), guide=FALSE) + 
+  theme(axis.line=element_line(colour="black"), 
+        axis.line.y=element_blank(), axis.ticks.y=element_blank(), 
+        axis.title=element_text(size=12, face="bold"), 
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.border = element_blank(),
+        panel.background = element_blank(), 
+        text = element_text(size=15), 
+        axis.text.y = element_text(face=c(
+          "bold", "plain", "plain", "plain", "plain", "plain", "plain", "plain", "plain"), 
+          size=c(12, 10, 10, 10, 10, 10, 10, 10, 10)), 
+        legend.position="none")
+HRRG1
+```
+
+
+I use ggplot2 so that was what I used to make this example.
+All the data that you will need can be found in the `.csv` file titled *test3R.csv*. Simply clone the repository and follow the below instructions and you will be on your way:
+  
+*   Copy the repo  ```git clone https://github.com/marcsze/SchlossLabPresentations.git```
+*   Move into the `2016_06_23` directory of `SchlossLabPresentations`
+*   Move these files to whatever directory you want them in
+*   Work with your team to create a kick-!@# graph
+
+The usage of either base or ggplot2 was preassigned and what each team used will be listed later below.  If teams want to see the actual code used to build the graph in they can take a look at the `.R` file also provided with this repo.  
+  
+There will be a 5-10 mins intro on my graph version and the data table so that everyone is on the same page with respects to what the data is trying to represent.  The next 35 mins will be dedicated to creating a graph in your teams, the next 15 mins will be left open to view the graphs and comment on what everyone on the team liked and did not like about making the graph as well as general comments and open discussion.  Each team is expected to utilize a team coding approach and will use only one computer between the two of them.
+<br><br>
+
+##Teams
+
+* Matt J and Matt D - *Base*
+* Geoff and Kaitlin - *ggplot2*
+* Pat - *Base*
+* Nick and Marian - *ggplot2*
+<br><br>
+
+##Graphs by Teams
+
+####Pat - Team Base
+
+```{r Pat_graph, warning=FALSE, message=FALSE, echo=FALSE}
+data <- read.csv(file="test3R.csv", header=TRUE, stringsAsFactors=F)
+
+#Sort by log relative risk, but keep pooled last
+o <- c(1, order(data$LogFC[-1], decreasing=T)+1)
+data <- data[o,]
+
+
+#Get rid of dates and put sample size in parentheses
+study_name <- gsub(", .*, n(=\\d*)", " (N\\1)", data$Study)
+
+
+#Color points by the region that they came from
+colors <- c("V4"="red", "V1-V3"="blue", "V3-V5"="green", "V2"="orange")
+
+par(mar=c(4,9,0.5,0.5))
+plot(NA, ylim=c(1,9), xlim=c(min(data$CILB),2), axes=F, xlab="", ylab="")
+
+#Need to call abline first so that this goes behind the points
+abline(v=0, lty=3, col="gray", lwd=2)
+
+#Plot the logRR points for the individual studies with their error
+#bars
+points(x=data$LogFC[-1], y=2:9, pch=19, col=colors[data$Region[-1]])
+segments(x0=data$CILB[-1], x1=data$CIUB[-1], y0=2:9, col=colors[data$Region[-1]], lty=1, lwd=2)
+
+#Plot the logRR points for the pooled analysis with its error bar
+points(x=data$LogFC[1], y=1, col="black", pch=19, cex=2)
+segments(x0=data$CILB[1], x1=data$CIUB[1], y0=1, col="black", lty=1, lwd=2)
+
+box()
+axis(1)
+
+#Wasn't able to vectorize font parameter
+axis(2, at=2:9, label=study_name[-1], las=2, tick=FALSE)
+axis(2, at=1, label=study_name[1], las=2, tick=FALSE, font=2)
+
+#Did't like where plot put the x-axis label
+mtext(side=1, at=0, line=2.2, text="Log Relative Risk")
+
+
+legend(x=1.25, y=2.5, legend=c("V4", "V1-V3", "V3-V5", "V2"), pch=19, col=colors)
+
+
+```
+
+So there are some neat things going on here.  Pat decided to add legend which in my example was excluded.  The other nice touch is keeping a box to surrond the plot.  I am not sure whether I prefer having no box.   The other Pat did was get rid of the study year that was displayed in the example graph.  One small, but perhaps significant detail, is that Pat did two things differently with his vertical line at 0.  First, he has made it gray instead of black which I think helps make it less of a focus.  In other words it stands out less.  The second thing he did was to make the horizontal line fall behind the points instead of in front of them like the example graph.
+<br><br>
+
+####Geoff and Kaitlin - Team ggplot2
+
+```{r GK-graph, warning=FALSE, message=FALSE, echo=FALSE}
+#Load in the data
+input <- read.delim("./test3R.csv", header=TRUE, sep=",")
+#input <- input[factor(input$Study, levels()]
+input$Study <- factor(input$Study, levels=input$Study)
+
+# Plot the data
+ggplot(input, aes(x=factor(Study), y=LogFC, colour=Region)) +
+	theme_bw() +
+	geom_point() +
+	geom_errorbar(aes(ymin=CILB, ymax=CIUB), width=0.25) +
+	coord_flip() +
+	scale_color_brewer(palette="Set1", na.value="Black") +
+	geom_hline(aes(yintercept=0), linetype="dashed") +
+	xlab("Study") +
+	ylab("Log Scale") +
+	theme(axis.title.x = element_text(face="bold") , axis.title.y= element_text(face="bold"))+
+	ggtitle("Marc's data, unicorn style")
+
+```
+
+
+So here Geof and Kaitlin have also opted for a box to surrond the entire data.  One thing that I found neat was the use of `theme_bw()` which removes the usual gray background that is default for ggplot2 graphs.  They also added a y-axis label and a graph title.  Similar to Pat's graph they decided to keep a legend attached to the graph.  They opted also to keep the ends on their CI lines unlike both the example and Pat's graph.  The final interesting point is that they decided to have the y axis not go to 2 log fold.  One additional point should be noted that Geof and Kaitlin managed to significantly reduce the amount of code used versus both Pat and the example graph.  
+<br><br>
+
+####Matt J and Matt D - Team Base
+
+```{r MM_graph, warning=FALSE, message=FALSE, echo=FALSE}
+
+test_table <- read.delim('test3R_edited.csv', header=TRUE, sep='\t')
+
+par(mar=c(4,11,1,1))
+dotchart(rev(test_table$LogFC), yaxt="n", xlab="Log Relative Risk", pch=19, xlim=c(-2,2), lcolor='white',
+         color=rev(c('firebrick', 'firebrick', 'darkgoldenrod1','darkgoldenrod1','darkgoldenrod1','dodgerblue','dodgerblue','darkorange2','black')))
+abline(v=0, lty=2)
+axis(2, at=c(1:9), labels = rev(test_table$Study), las=1, tick = F)
+segments(x0=c(rev(test_table$CILB)), y0=c(1:9), x1=c(rev(test_table$CIUB)), y1=c(1:9), col = rev(c('firebrick', 'firebrick', 'darkgoldenrod1','darkgoldenrod1','darkgoldenrod1','dodgerblue','dodgerblue','darkorange2','black')))
+points(x=0.2616398, y=1,pch=19,col='black', cex=2)
+
+```
+
+
+
+
+
+
+
+  
