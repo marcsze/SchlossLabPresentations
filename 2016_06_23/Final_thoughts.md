@@ -26,7 +26,7 @@ So with that all out of the way this post will take the following format:
 
 The lab was split into teams of two listed later on below and will be assigned the use of either ggplot2 or base to create **their own** version of this graph:
 
-![](Final_thoughts_files/figure-html/example_Graph-1.png)<!-- -->
+![](Final_thoughts_files/figure-html/example_Graph-1.png)
 
 
 I use ggplot2 so that was what I used to make this example.
