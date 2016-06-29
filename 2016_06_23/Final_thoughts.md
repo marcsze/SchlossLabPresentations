@@ -76,12 +76,22 @@ So team Matt decided to re-make the original `.csv` file and for their analysis 
 
 ####Marian and Nick - Team ggplot2
 
-![](Final_thoughts_files/figure-html/MN_graph-1.png)<!-- -->![](Final_thoughts_files/figure-html/MN_graph-2.png)<!-- -->
+![](Final_thoughts_files/figure-html/MN_graph-1.png)<!-- -->
+
+
+First, off it should be noted that Marian and Nick did go over time so it is possible that the other teams may have come up with a similar design with the same extra 10-15mins that they got.  Regardless, though they came up with some really neat ideas on how to display the information.  They have a multi-panel plot but I thought I would focus on their 16S region plot since it is the most similar to the others.  Some of the changes they made have already been covered by previous teams (adding a title to the graph, getting rid of the year and sample size in the study labels, and adding a legend). However, one major chnage that they added within the graph is faceting.  So there is not extra information built into the graph based on the study size.  With the largest study at the top and smaller studies closer to the bottom (excluding the pooled final n).  They have done this while keeping the coloring for the variable regions.  As an aside I changed their colour scheme to the same as the example because they had some of the same colors assigned to multiple variable regions.  Honestly, I really like the potential of where you can go after building this initial framework.
+<br><br>
+
+
+##Final Thoughts
+
+Overall I think everyone came away with the notion that for the most part what you can do with ggplot2 you can do with base.  I personally still think that building the actual graph is simpler with ggplot2 than it is with base.  This is a personal opinon though and in the end both methods, when used properly, can give you great visaulizations.  Perhaps the one stand out aspect of ggplot2 that we found was the ability to easily facet the data into groups and organize the graph based on this.  Being able to easily perform this step can add a lot of extra information to the graph as demonstrated by Marian and Nick.
+<br><br>
+
+It would be nice to have this again at some point in time with a different data set and graph type.  Additionaly, we could also add other programs like python to see how they perform.  Most importantly, I think we all learned at least one or two interesting things about both base and ggplot2 that could be used in future projects.
+<br><br>
+
+So who won?  Well the comp out answer would be that we all won.  However, even with a time penalty, I think Marian and Nick really had the most unique take on the data.  They also showcased an aspect of ggplot2 that makes it such a strong tool.
 
 
 
-
-
-
-
-  
