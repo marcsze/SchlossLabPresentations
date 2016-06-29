@@ -1,3 +1,5 @@
+.RData
+.RHistory
 .Rproj.user/
 *.Rproj
 *.tiff
