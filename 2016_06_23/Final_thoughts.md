@@ -64,12 +64,19 @@ So there are some neat things going on here.  Pat decided to add legend which in
 ![](Final_thoughts_files/figure-html/GK-graph-1.png)<!-- -->
 
 
-So here Geof and Kaitlin have also opted for a box to surrond the entire data.  One thing that I found neat was the use of `theme_bw()` which removes the usual gray background that is default for ggplot2 graphs.  They also added a y-axis label and a graph title.  Similar to Pat's graph they decided to keep a legend attached to the graph.  They opted also to keep the ends on their CI lines unlike both the example and Pat's graph.  The final interesting point is that they decided to have the y axis not go to 2 log fold.  
+So here Geof and Kaitlin have also opted for a box to surrond the entire data.  One thing that I found neat was the use of `theme_bw()` which removes the usual gray background that is default for ggplot2 graphs.  They also added a y-axis label and a graph title.  Similar to Pat's graph they decided to keep a legend attached to the graph.  They opted also to keep the ends on their CI lines unlike both the example and Pat's graph.  The final interesting point is that they decided to have the y axis not go to 2 log fold.  One additional point should be noted that Geof and Kaitlin managed to significantly reduce the amount of code used versus both Pat and the example graph.  
 <br><br>
 
 ####Matt J and Matt D - Team Base
 
 ![](Final_thoughts_files/figure-html/MM_graph-1.png)<!-- -->
+
+So team Matt decided to re-make the original `.csv` file and for their analysis they used one called `test3R_edited.csv`.  They also like Geoff and Kaitlin tried to go with a minimal code approach.  Like the two previous teams they also opted for a box around the data points.  Unlike the other two teams though they sorted the display based on the variable region used.  This is a similar approach used as the example graph.  
+<br><br>
+
+####Marian and Nick - Team ggplot2
+
+![](Final_thoughts_files/figure-html/MN_graph-1.png)<!-- -->![](Final_thoughts_files/figure-html/MN_graph-2.png)<!-- -->
 
 
 

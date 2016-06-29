@@ -8,7 +8,7 @@ output:
 ---
 ```{r load_packages, warning=FALSE, message=FALSE, echo=FALSE}
 
-deps = c("ggplot2", "RColorBrewer", "wesanderson");
+deps = c("ggplot2", "RColorBrewer", "wesanderson", "cowplot");
 for (dep in deps){
   if (dep %in% installed.packages()[,"Package"] == FALSE){
     install.packages(as.character(dep), quiet=TRUE);
@@ -189,6 +189,75 @@ axis(2, at=c(1:9), labels = rev(test_table$Study), las=1, tick = F)
 segments(x0=c(rev(test_table$CILB)), y0=c(1:9), x1=c(rev(test_table$CIUB)), y1=c(1:9), col = rev(c('firebrick', 'firebrick', 'darkgoldenrod1','darkgoldenrod1','darkgoldenrod1','dodgerblue','dodgerblue','darkorange2','black')))
 points(x=0.2616398, y=1,pch=19,col='black', cex=2)
 
+```
+
+So team Matt decided to re-make the original `.csv` file and for their analysis they used one called `test3R_edited.csv`.  They also like Geoff and Kaitlin tried to go with a minimal code approach.  Like the two previous teams they also opted for a box around the data points.  Unlike the other two teams though they sorted the display based on the variable region used.  This is a similar approach used as the example graph.  
+<br><br>
+
+####Marian and Nick - Team ggplot2
+
+```{r MN_graph, warning=FALSE, message=FALSE, echo=FALSE}
+
+test3R <- read.csv("test3R.csv")
+
+# THE PLAN
+# Facet pooled outcome
+# Order by year, point size represents the size of the study 
+
+data <- test3R
+stud <- as.character(test3R$Study)
+stud[1] <- c("Pooled Outcome, All Studies, Total=1437")
+stud2 <- stud
+stud3 <- strsplit(stud2, ",")
+stud4 <- rbind(unlist(stud3[[1]]),unlist(stud3[[2]]),unlist(stud3[[3]]),
+              unlist(stud3[[4]]),unlist(stud3[[5]]),unlist(stud3[[6]]),
+              unlist(stud3[[7]]),unlist(stud3[[8]]),unlist(stud3[[9]]))
+stud5 <- cbind(test3R, stud4)
+
+colnames(stud5) <- c("X","Study","LogFC","CILB","CIUB","p",
+                     "interval","RelConf","Region","stud","Year","Size")
+
+# There were secret spaces before "n="!
+stud5$size2 <- factor(stud5$Size, levels = c(" n=507", " n=256", " n=200", " n=172", " n=146"," n=63", " n=30"," Total=1437"))
+
+# Set up the main plot
+plot <- ggplot(stud5, aes(LogFC, stud, xmax=CIUB, xmin=CILB)) + 
+  coord_cartesian(xlim=c(-2.2, 2.2)) + 
+  geom_vline(xintercept = 0.0, linetype=2, alpha=0.75) + 
+  geom_errorbarh(data = subset(stud5, stud=="Pooled Outcome"), 
+                 colour="black", alpha=0.5, height=0) + 
+  xlab("Log Relative Risk") + 
+  geom_point(data = subset(stud5, stud=="Pooled Outcome"), 
+             colour="black", size=5) +
+  ylab("") +
+  theme_classic() 
+
+  
+year <- plot + 
+  facet_grid(Year~., scales="free", space = "free_y") + 
+  geom_point(aes(colour=Year), size = 3) + 
+  geom_errorbarh(aes(colour=Year), alpha=0.5, height=0) + 
+  scale_color_brewer(palette = "Set1") +
+  ggtitle("Study Year")
+
+study_size <- plot + 
+  facet_grid(Size~., scales="free", space = "free_y") + 
+  geom_point(aes(colour=Size), size = 3) +  
+  geom_errorbarh(aes(colour=Size), alpha=0.5, height=0) + 
+  scale_color_brewer(palette = "Set3") + 
+  ggtitle("Study Size")
+
+region_16s <- plot + 
+  facet_grid(Region~., scales="free", space = "free_y") +
+  geom_point(aes(colour=Region), size = 3) + 
+  geom_errorbarh(aes(colour=Region), alpha=0.5, height=0) + 
+  scale_color_manual(values = wes_palette("FantasticFox")) +
+  ggtitle("16S Region")
+
+year
+
+plot_grid(year, study_size, region_16s, labels = c("A", "B", "C"), 
+          nrow = 1, ncol = 3)
 ```
 
 
