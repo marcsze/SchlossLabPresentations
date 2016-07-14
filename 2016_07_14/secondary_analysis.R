@@ -11,7 +11,7 @@ supplData <- read.csv("mmc2.csv", header=T, stringsAsFactors = FALSE)
 
 # In order to use FDR p-values need to be normally distributed/uniformaly distributed
 phist <- ggplot(supplData, aes(x=CE_to_ACE_p))
-phist + geom_histogram(fill = "white", colour = "black", bins = 30) + 
+phist + geom_histogram(fill = "white", colour = "black", bins = 20) + 
   theme_bw() + xlab("P-values")
       # P-values are Not normally distributed
   #Do not look at this distribution and say, 
@@ -32,7 +32,7 @@ phist + geom_histogram(fill = "white", colour = "black", bins = 30) +
 # Check to see if second FDR p-values groups are normally distributed
 notOTUsupplData <- supplData[which(supplData$Level != "OTU"), ] 
 phist2 <- ggplot(notOTUsupplData, aes(x=CE_to_ACE_p))
-phist2 + geom_histogram(fill = "white", colour = "black", bins = 30) + 
+phist2 + geom_histogram(fill = "white", colour = "black", bins = 20) + 
   theme_bw() + xlab("P-values") + ylim(0, 35)
 
 # Need to see if having more significant duplicated values effects results
@@ -41,7 +41,7 @@ noOnePvalues <- noOnePvalues[order(noOnePvalues$CE_to_ACE_p, decreasing = TRUE),
 noOnePvalues <- noOnePvalues[!duplicated(noOnePvalues$CE_to_ACE_p),]
 UniquenotOTUsupplData <- noOnePvalues[which(noOnePvalues$Level != "OTU"), ] 
 phist3 <- ggplot(UniquenotOTUsupplData, aes(x=CE_to_ACE_p))
-phist3 + geom_histogram(fill = "white", colour = "black", bins = 30) + 
+phist3 + geom_histogram(fill = "white", colour = "black", bins = 20) + 
   theme_bw() + xlab("P-values") + ylim(0, 35)
 
 
