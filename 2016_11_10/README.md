@@ -31,8 +31,11 @@ For the challenge we will be using a paired programming approach.  This means on
 **Teams**
 
 Matt J and Nick
+
 Geoff and Charlie
+
 Pat and Matt D
+
 Kaitlin and Amanda
 
 
