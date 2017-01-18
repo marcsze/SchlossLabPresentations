@@ -10,9 +10,9 @@ We will run through this code and then together talk about ways in which to impr
 
 *Breakout Groups:*  
 1) Geoff and Charlie  
-2) Pat and Matt D  
-3) Matt J and Kaitlyn  
-4) Nick and Marc (or Amanda - depending if she is able to make lab meeting)  
+2) Pat and Kaitlyn   
+3) Nick and Matt D  
+
 
 
 
