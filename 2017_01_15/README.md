@@ -9,7 +9,7 @@ We will run through this code and then together talk about ways in which to impr
 
 
 *Breakout Groups:*  
-1) Geoff and Charlie  
+1) Geof and Charlie  
 2) Pat and Kaitlyn   
 3) Nick and Matt D  
 
