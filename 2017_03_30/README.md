@@ -21,8 +21,8 @@ With these two files you should be able to participate completely in the exercis
 **Teams:**
 
 1. Matt D and Matt J
-2. Geoff and Charlie
-3. Pat and Nick
+2. Pat, Geoff, and Charlie
+3. Marian and Nick
 4. Kaitlin and Amanda
 
 
