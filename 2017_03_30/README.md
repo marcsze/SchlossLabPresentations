@@ -6,7 +6,12 @@ reivew is to see the different ways that people go about generating relative abu
 this version or slightly tweaking it is not the purpose of this exercise.  You can use whatever tools you want within R to accomplish 
 the task.
 
-**You should absolutely have in your pulled repo:**
+**Time breakdown:**
+* 10 mins of review of needed material
+* 30 mins of coding
+* 20 mins of discussion of different group solutions
+
+**You should absolutely have these in your pulled repo:**
 * example.shared
 * example.taxnomy
 
