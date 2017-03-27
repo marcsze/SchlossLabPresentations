@@ -14,6 +14,7 @@ the task.
 **You should absolutely have these in your pulled repo:**
 * example.shared
 * example.taxnomy
+* example.metadata
 
 With these two files you should be able to participate completely in the exercise at hand.
 
