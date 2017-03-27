@@ -19,8 +19,10 @@ With these two files you should be able to participate completely in the exercis
 
 **Goals:**  
 1. Generate Relative Abundance for every OTU
+   * create a summary file with median and IQR for each OTU by disease
 2. Generate Relative Abundance at the Phyla level
-3. Create a stacked bar plot for similarity comparison (If time permitting)
+   * create a summary file with median and IQR for each phyla by disease
+3. Create a plot using the data that has been generated
 
 
 **Teams:**
@@ -31,7 +33,7 @@ With these two files you should be able to participate completely in the exercis
 4. Kaitlin and Amanda
 
 
-**My Own Bar Plot** *(For comparison purposes)***:**
+**My Own Bar Plot** *(Example only)***:**
 
 
 ![](example_fig.png)
