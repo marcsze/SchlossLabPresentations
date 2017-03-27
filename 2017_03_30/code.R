@@ -5,6 +5,8 @@
 # Load in needed libraries
 library(dplyr)
 library(tidyr)
+library(ggplot2)
+library(scales)
 
 # Create the data set to be used in the example
 shared <- read.delim("final.shared", header = T) %>% slice(1:30) %>% 
@@ -73,11 +75,20 @@ for(j in 1:length(counts)){
 phyla_data <- phyla_data %>% mutate(total_counts = expanded_counts, per.rel.abund = (total/expanded_counts)*100)
 
 
+# Generate a bar plot so we can see if data look similar
 
+example_fig <- ggplot(phyla_data, aes(factor(Group), per.rel.abund, fill = taxa_call)) + 
+  geom_bar(position = "fill", stat = "identity") + 
+  scale_y_continuous(labels = percent_format(), expand = c(0,0)) + 
+  scale_fill_discrete(name = "Phyla") + 
+  coord_flip() + theme_bw() + 
+  xlab("Sample") + ylab("% Relative Abundance") + 
+  theme(plot.title = element_text(face = "bold"), 
+        legend.title = element_text(face = "bold"), 
+        axis.title = element_text(face = "bold"))
 
-
-
-
+ggsave(file = "example_fig.png", example_fig, 
+       width=6, height = 6, dpi = 300)
 
 
 
