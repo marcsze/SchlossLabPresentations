@@ -30,7 +30,7 @@ With these two files you should be able to participate completely in the exercis
 
 1. Matt D and Matt J
 2. Pat, Geof, and Charlie
-3. Marian and Nick
+3. Marian and Nick (If Marian can't make it Geof)
 4. Kaitlin and Amanda
 
 
