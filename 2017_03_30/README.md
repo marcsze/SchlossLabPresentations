@@ -6,6 +6,11 @@ reivew is to see the different ways that people go about generating relative abu
 this version or slightly tweaking it is not the purpose of this exercise.  You can use whatever tools you want within R to accomplish 
 the task.
 
+## Link to Optimized Solution
+
+**Nick finished off his example and you can find the code [here](https://github.com/marcsze/SchlossLabPresentations/edit/master/2017_03_30/example.R)**
+
+
 **Time breakdown:**
 * 10 mins of review of needed material
 * 30 mins of coding
