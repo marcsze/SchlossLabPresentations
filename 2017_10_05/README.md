@@ -38,8 +38,9 @@ read_csv("a,b\n\"1")
 read_csv("a,b\n1,2\na,b")
 read_csv("a;b\n1;3")
 ```
+4) What problems can occur when parsing numbers, strings, factors, or dates(date-times, etc.)?
 
-
+5) What if any benefits or disadvantages are there for using the `read_csv` or `read.csv` functions?
 
 
 **Other types of data:**
