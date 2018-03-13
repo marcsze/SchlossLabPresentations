@@ -33,6 +33,7 @@ test <- flight_data %>%
 
 
 #Is there a relationship between the age of a plane and its delays?
+######################## Marc & Charlie ############################
 flight_data %>% 
   select(tailnum, arr_delay) %>% 
   left_join(select(planes_data, tailnum, year), by = "tailnum") %>% 
@@ -43,6 +44,35 @@ flight_data %>%
   labs(x = "Year", y = expression(Log["2"]~Arrival~Delay~(mins)))
 
 
+######################## Nick & Will ############################
+flights %>%
+  select(year, tailnum, contains('delay')) %>%
+  left_join(rename(select(planes, year, tailnum), year_built = year)) %>%
+  mutate(age = year - year_built,
+         delay = arr_delay - dep_delay) %>% 
+  ggplot(aes(x = age, y = delay)) +
+  geom_point() + 
+  geom_smooth(method='lm')
+
+######################## Ada & Pat ############################
+age_delay <- flights %>% select(tailnum, dep_delay) %>%
+  left_join(select(planes, tailnum, year), by="tailnum") %>% 
+  mutate(age=2013-year)
+
+ggplot(age_delay, aes(x=age, y=dep_delay)) + geom_hex() + scale_y_log10()
+
+cor.test(age_delay$age,age_delay$dep_delay)
+
+
+######################## Kaitlin & Marian ############################
+age_delay <- flights %>%
+  rename(flight_year = year) %>%
+  left_join(planes, by = "tailnum") %>%
+  mutate(age=2013-year) 
+
+ggplot(age_delay, aes(x=age, y=arr_delay)) + geom_point() + geom_smooth(method="lm")
+
+summary(lm(arr_delay ~ age, data = age_delay))
 
 # What does anti_join(flights, airports, by = c("dest" = "faa")) tell you? 
 # What does anti_join(airports, flights, by = c("faa" = "dest")) tell you?
