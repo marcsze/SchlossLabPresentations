@@ -32,7 +32,7 @@ The final talks before lunch were short talks and I really like having them beca
 Curtis Huttenhower's group put on a brief workshop on their biobakery toolset. In my opinon they had an impossible task with 100 people attending and ~33% of them not knowing or ever worked with the command line. They did the best they could but it did not stop some people complaining that the workshop was too advanced.
 
 <div class="center">
-	<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">As usual, these workshops are too much geared towards people who already know this stuff, not for folks who want to learn it. <br>Frustrating.<a href="https://twitter.com/hashtag/KSgut?src=hash&amp;ref_src=twsrc%5Etfw">#KSgut</a><a href="https://twitter.com/hashtag/KSmicrobiome?src=hash&amp;ref_src=twsrc%5Etfw">#KSmicrobiome</a></p>&mdash; Elisabeth Bik (@MicrobiomDigest) <a href="https://twitter.com/MicrobiomDigest/status/970788776892022784?ref_src=twsrc%5Etfw">March 5, 2018</a></blockquote><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+	<blockquote class="twitter-tweet" data-partner="tweetdeck"><p lang="en" dir="ltr">As usual, these workshops are too much geared towards people who already know this stuff, not for folks who want to learn it. <br>Frustrating.<a href="https://twitter.com/hashtag/KSgut?src=hash&amp;ref_src=twsrc%5Etfw">#KSgut</a><a href="https://twitter.com/hashtag/KSmicrobiome?src=hash&amp;ref_src=twsrc%5Etfw">#KSmicrobiome</a></p>&mdash; Elisabeth Bik (@MicrobiomDigest) <a href="https://twitter.com/MicrobiomDigest/status/970788776892022784?ref_src=twsrc%5Etfw">March 5, 2018</a></blockquote><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 </div>
 
