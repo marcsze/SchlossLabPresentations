@@ -36,3 +36,14 @@ Curtis Huttenhower's group put on a brief workshop on their biobakery toolset. I
 
 </div>
 
+The afternoon session had interesting talks but the session was dominated by mouse microbiota work and the speakers did not attempt to talk about the relevence to humans. I think the absurdity of this disconnect was highlighted when an audience member asked Mirko Trajkovski, "Should we put individuals in cold weather and treat them with antibiotics to convert our fat to brown fat?" There was an interesting study that Philippe Gerard performed in collaboration with Liping Zhao that isolated a highly dominant microbe from an obese individual and when this same microbe was given to a gnotobiotic mouse it made it morbidly obese. 
+
+
+### Day 2
+
+I decided to go to the X4 session on this day. The main reason was that I wanted to listen Sarkis Maxmanian talk on the gut-brain axis (specifically the microbiota and autism). The first talk was by Meghan Koch and I have to say the title, "Maternal antibodies regulate neonatal health" sounded like it would have a lot of immunology. I thought it would be in humans but the antibody subtyping was all done in mice. Essentially the argument is that the microbiota in mice changes the levels of the subtype of antibodies that cross the placenta. However, it is not clear that this has any outcome on different diseases in mice or humans. It seems like a lot of fishing in a mouse.
+
+Sarkis's talk was no better in that regard. A lot of mouse findings and fishing for signals between the host and the microbiota. Many of these differences between case and control need large numbers of mice to detect meaning effect size in mice is small. So, the question that really needs to be answered in this field is whether small effects in mice translate to biologically meaningful effects in humans? I don't know if this will pan out but history has shown that large effects in mice have failed spectacularly in humans...the cancer field is littered with examples. Finally, I'm not sure if the outcome measures that are chosen are really representative of human autism. 
+
+### Day 3
+
