@@ -33,8 +33,7 @@ Curtis Huttenhower's group put on a brief workshop on their biobakery toolset. I
 
 <div class="center">
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">As usual, these workshops are too much geared towards people who already know this stuff, not for folks who want to learn it. <br>Frustrating.<a href="https://twitter.com/hashtag/KSgut?src=hash&amp;ref_src=twsrc%5Etfw">#KSgut</a><a href="https://twitter.com/hashtag/KSmicrobiome?src=hash&amp;ref_src=twsrc%5Etfw">#KSmicrobiome</a></p>&mdash; Elisabeth Bik (@MicrobiomDigest) <a href="https://twitter.com/MicrobiomDigest/status/970788776892022784?ref_src=twsrc%5Etfw">March 5, 2018</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">As usual, these workshops are too much geared towards people who already know this stuff, not for folks who want to learn it. <br>Frustrating.<a href="https://twitter.com/hashtag/KSgut?src=hash&amp;ref_src=twsrc%5Etfw">#KSgut</a><a href="https://twitter.com/hashtag/KSmicrobiome?src=hash&amp;ref_src=twsrc%5Etfw">#KSmicrobiome</a></p>&mdash; Elisabeth Bik (@MicrobiomDigest) <a href="https://twitter.com/MicrobiomDigest/status/970788776892022784?ref_src=twsrc%5Etfw">March 5, 2018</a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 </div>
 
