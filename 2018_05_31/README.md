@@ -10,6 +10,7 @@ By the end of this lesson learners should have successfully recreated a specific
 * Download the specific `otu_table.csv` file or pull this specific repo.
 * Use R to create a graph that highlights differences between case and control groups.
 * The visualization that you will use is dependent on the group you are in.
+* Once the visualization is made spend the remaining time going over strengths and weaknesses.
 
 **Time for each Task**
 * Introduction - 5 minutes
