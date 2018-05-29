@@ -17,7 +17,7 @@ By the end of this lesson learners should have successfully recreated a specific
 * Group discussion - 35 minutes
 
 **Groups**
-* Pie Chart - Pat and Begum
+* Pie chart - Pat and Begum
 * Box plot - Kaitlin and Josh
-* Violin Plot - Nick and Sarah
-* Bar Plot (superimpose points optional) - Will and Ada 
+* Violin plot - Nick and Sarah
+* Bar plot (superimpose points optional) - Will and Ada 
