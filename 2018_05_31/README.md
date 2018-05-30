@@ -1,4 +1,4 @@
-# A Data Visualization Bonanza
+# A Data Visualization Refresher
 
 **Main Objective**  
 By the end of this lesson learners should have successfully recreated a specific type of graph using the given data, list three or more strengths and weaknesses of the visualization, and have shared these with the rest of the lab group.
