@@ -8,9 +8,20 @@ By the end of this lesson learners should have successfully recreated a specific
 
 **Instructions**
 * Download the specific `otu_table.csv` file or pull this specific repo.
-* Use R to create a graph that highlights differences between case and control groups.
-* The visualization that you will use is dependent on the group you are in.
-* Once the visualization is made spend the remaining time going over strengths and weaknesses.
+* Create a graph that highlights differences between case and control groups for 1 OTU.
+* Use the `map` function to create 3 identical graphs of 3 different OTUs (**BONUS**)
+* The base graph type will be divided amongst the groups 
+	* A random draw will be done to determine which group gets to choose their type of graph first
+
+**Base graph option**
+* Pie chart
+* Points and lines
+* Box plot
+* Violing plot
+* Bar plot
+
+*Note: This forms the base of your graph that will be used to represent each individual within the figure, it does not have to be the only thing in it. Use your knowledge of the tidyverse and ggplot2 to make a kick-ass visual*
+
 
 **Time for each Task**
 * Introduction - 5 minutes
@@ -18,7 +29,8 @@ By the end of this lesson learners should have successfully recreated a specific
 * Group discussion - 35 minutes
 
 **Groups**
-* Pie chart - Pat and Begum
-* Box plot - Kaitlin and Josh
-* Violin plot - Nick and Sarah
-* Bar plot (superimpose points optional) - Will and Ada 
+* G1 - Pat and Begum
+* G2 - Kaitlin and Josh
+* G3 - Nick and Sarah
+* G4 - Will and Ada 
+
