@@ -29,8 +29,7 @@ By the end of this lesson learners should have successfully recreated a specific
 * Group discussion - 35 minutes
 
 **Groups**
-* G1 - Pat and Charlie
-* G2 - Kaitlin and Marc
-* G3 - Nick and Sarah
-* G4 - Will and Ada 
+* G1 - Pat, Kaitlin and Charlie
+* G2 - Nick and Sarah
+* G3 - Will and Ada 
 
