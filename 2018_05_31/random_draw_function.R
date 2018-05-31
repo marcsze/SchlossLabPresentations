@@ -46,7 +46,7 @@ random_draw <- function(groups){
 
 
 
-random_draw(4)
+random_draw(3)
 
 
 
